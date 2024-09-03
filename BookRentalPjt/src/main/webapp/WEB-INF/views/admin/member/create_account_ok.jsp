@@ -23,9 +23,12 @@
 		<div id="section_wrap">
 		
 			<div class="word">
-			
-				<h3>CREATE ACCOUNT SUCCESS!!</h3>
-				
+
+				<h3>id: <c:out value="${accountConfirm.getA_m_id()}"/></h3>
+				<h3>name: <c:out value="${accountConfirm.getA_m_name()}"/></h3>
+				<h3>gender: <c:out value="${accountConfirm.getA_m_gender()}"/></h3>
+				<h3>mail: <c:out value="${accountConfirm.getA_m_mail()}"/></h3>
+				<h3>phone: <c:out value="${accountConfirm.getA_m_phone()}"/></h3>
 			</div>
 			
 			<div class="others">

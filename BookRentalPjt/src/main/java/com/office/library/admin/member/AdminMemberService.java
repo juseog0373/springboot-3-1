@@ -17,18 +17,18 @@ public class AdminMemberService {
     @Autowired
     AdminMemberDao adminMemberDao;
 
-    public int createAccountConfirm(AdminMemberVo adminMemberVo) {
+    public AdminMemberVo createAccountConfirm(AdminMemberVo adminMemberVo) {
         System.out.println("AdminMemberService.createAccountConfirm");
         boolean isMember = adminMemberDao.isAdminMember(adminMemberVo.a_m_id);
         if (!isMember) {
             int result = adminMemberDao.insertAdminAccount(adminMemberVo);
             if (result > 0) {
-                return ADMIN_ACCOUNT_CREATE_SUCCESS;
+                return adminMemberVo;
             } else {
-                return ADMIN_ACCOUNT_CREATE_FAIL;
+                return adminMemberVo;
             }
         } else {
-            return ADMIN_ACCOUNT_ALREADY_EXIST;
+            return adminMemberVo;
         }
     }
 }
