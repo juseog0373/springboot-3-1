@@ -7,7 +7,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
 public class AdminHomeController {
-	@RequestMapping(value = {"", "/"}, method = GET)
+	@RequestMapping(value = {"/admin"}, method = GET)
 	public String home() {
 		System.out.println("[AdminHomeController] home()");
   		return "admin/home";
